@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+/* @font-face {
+  font-family: "Roboto";
+  src: url(./assets/fonts/Roboto-Bold.ttf);
+} */
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    /* Primary */
+
+    --clr-Tomato: hsl(4, 100%, 67%);
+
+    /* ### Neutral */
+
+    --clr-Dark-S-Grey: hsl(234, 29%, 20%);
+    --clr-Charcoal-Grey: hsl(235, 18%, 26%);
+    --clr-Grey: hsl(231, 7%, 60%);
+    --clr-White: hsl(0, 0%, 100%);
+  }
+
+  body {
+    min-height: 100vh;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+  }
+
+  #input-control.error input {
+    @apply border-orange-400 active:text-orange-500 
+        placeholder:text-orange-500
+        bg-orange-400/10;
+  }
+}

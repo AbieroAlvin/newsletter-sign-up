@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="../dist/output.css" />
+
+    <title
+      >Frontend Mentor | Newsletter sign-up form with success message</title
+    >
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main
+      class="h-screen mx-auto sm:p-8 bg-[var(--clr-Charcoal-Grey)] grid place-content-center"
+    >
+      <div
+        class="flex flex-col-reverse sm:flex-row items-center gap-6 justify-center bg-white p-4 sm:p-6 sm:mx-auto sm:rounded-[2.5rem] sm:w-[860px]"
+        id="main"
+      >
+        <div class="pr-2">
+          <div class="mt-4 mb-4">
+            <h1 class="text-4xl sm:text-6xl font-bold">Stay updated!</h1>
+            <p class="mt-4 pr-4">
+              Join 60,000+ product managers receiving monthly updates on:</p
+            >
+          </div>
+          <div class="flex flex-col gap-4">
+            <span class="flex gap-4"
+              ><img src="./assets/images/icon-list.svg" alt="/" />Product
+              discovery and building what matters</span
+            >
+            <span class="flex gap-4"
+              ><img src="./assets/images/icon-list.svg" alt="/" /> Measuring to
+              ensure updates are a success</span
+            >
+            <span class="flex gap-4"
+              ><img src="./assets/images/icon-list.svg" alt="/" />And much
+              more!</span
+            >
+          </div>
+          <form class="mt-4" id="form">
+            <div id="input-control" class="relative">
+              <label for="email" class="mb-1">Email address</label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="email@company.com"
+                class="border-2 border-[var(--clr-Grey)] px-6 py-2 w-full sm:w-[360px] rounded-md mb-2 cursor-pointer outline-none"
+              />
+              <div
+                class="error text-sm absolute right-[10px] sm:right-[60px] top-[1px] text-orange-400"
+              ></div>
+            </div>
+            <button
+              type="submit"
+              class="inline- block bg-[var(--clr-Dark-S-Grey)] text-white px-2 py-3 rounded-md sm:w-[360px] w-full hover:bg-[var(--clr-Tomato)]"
+              >Subscribe to monthly newsletter</button
+            >
+          </form>
+        </div>
+        <div>
+          <img src="./assets/images/illustration-sign-up-desktop.svg" alt="/" />
+        </div>
+      </div>
+
+      <!-- success card -->
+      <div
+        class="sm:w-[400px] sm:h-[400px] h-screen bg-white sm:rounded-[2.5rem] p-6 flex-col sm:px-12 justify-center hidden"
+        id="success"
+      >
+        <img
+          src="./assets/images/icon-success.svg"
+          alt="/"
+          class="w-[70px] h-[70px]"
+        />
+        <div class="mt-6 flex flex-col gap-4 mb-12 sm:mb-6">
+          <h1 class="text-4xl font-bold">Thanks for Subscribing!</h1>
+          <p>
+            A confirmation email has been sent to
+            <span
+              id="success-email"
+              class="text-[var(bg-\[var\(--clr-Dark-S-Grey)])] font-semibold"
+            ></span>
+            Please open it and click the button inside to confirm your
+            subscription.</p
+          >
+        </div>
+        <button
+          class="inline- block bg-[var(--clr-Dark-S-Grey)] text-white px-6 py-3 rounded-md w-full cursor-pointer hover:bg-[--clr-Tomato]"
+          >Dismiss message</button
+        >
+      </div>
+
+      <footer class="mt-4">
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Abiero Alvin</a>.
+        </div>
+      </footer>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
